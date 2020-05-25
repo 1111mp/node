@@ -1,6 +1,6 @@
 const router = require('koa-router')()
 const { Op } = require('sequelize/lib/sequelize')
-const Dynamic = require('../common/models/dynamic')
+const { Dynamic } = require('../common/models')
 
 router.prefix('/dynamic')
 
@@ -112,7 +112,7 @@ router.post('/star', async (ctx, next) => {
     return false
   }
 
-  
+
 })
 
 module.exports = router

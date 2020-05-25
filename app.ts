@@ -6,7 +6,7 @@ const onerror = require('koa-onerror')
 const bodyparser = require('koa-bodyparser')
 const compose = require('koa-compose')
 const staticServ = require('koa-static')
-require('./sequelize')
+// require('./sequelize')
 
 const redis = require('./common/middlewares/redis')
 const Auth = require('./common/middlewares/auth')

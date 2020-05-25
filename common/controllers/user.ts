@@ -1,5 +1,5 @@
-const User = require('../models/user')
-const { Op } = require('sequelize/lib/sequelize')
+const { User } = require('../models')
+// const { Op } = require('sequelize/lib/sequelize')
 
 /** 获取所有用户 */
 const queryAll = async (ctx) => {
@@ -31,7 +31,7 @@ const register = async (ctx) => {
 	} catch (err) {
 		const msg = err.errors[0]
 		ctx.body = {
-			code: 500,
+			code: 400,
 			data: `${msg.value} ${msg.message}`
 		}
 	}
@@ -41,3 +41,5 @@ module.exports = {
 	queryAll,
 	register
 }
+
+export { }
